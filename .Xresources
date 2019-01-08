@@ -1,1 +1,54 @@
-/home/hizkifw/.Xresources
+URxvt.depth:        32
+URxvt.background:	rgba:0000/0000/0200/c800
+!URxvt.background:	#1F1D19
+URxvt.foreground:	#DEDEDE
+URxvt.font:			xft:Source Code Pro:size=10:antialias=true:hinting=true
+URxvt.boldFont:		xft:Source Code Pro:bold:size=10:antialias=true:hinting=true
+URxvt.scrollBar:	false
+URxvt.saveLines:	65535
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+!Xft*dpi:       96
+Xft*antialias: True
+Xft*hinting:   Full
+URxvt.keysym.KP_Add:    +
+URxvt.keysym.KP_Subtract: -
+URxvt.keysym.KP_Multiply: *
+URxvt.keysym.KP_Divide  : /
+URxvt.keysym.KP_Decimal : .
+URxvt.keysym.KP_Separator : ,
+URxvt.keysym.KP_1:      1
+URxvt.keysym.KP_2:      2
+URxvt.keysym.KP_3:      3
+URxvt.keysym.KP_4:      4
+URxvt.keysym.KP_5:      5
+URxvt.keysym.KP_6:      6
+URxvt.keysym.KP_7:      7
+URxvt.keysym.KP_8:      8
+URxvt.keysym.KP_9:      9
+URxvt.keysym.KP_0:      0
+
+! black
+*color0:  #2E3436
+*color8:  #555753
+! red
+*color1:  #a40000
+*color9:  #EF2929
+! green
+*color2:  #4E9A06
+*color10: #8AE234
+! yellow
+*color3:  #C4A000
+*color11: #FCE94F
+! blue
+*color4:  #3465A4
+*color12: #729FCF
+! purple
+*color5:  #75507B
+*color13: #AD7FA8
+! orange (replaces cyan)
+*color6:  #ce5c00
+*color14: #fcaf3e
+! white
+*color7:  #babdb9
+*color15: #EEEEEC

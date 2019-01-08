@@ -1,1 +1,3 @@
-/home/hizkifw/.xsessionrc
+xinput set-prop 'DLL0797:01 06CB:7E92 Touchpad' 'libinput Tapping Enabled' 1 &
+xinput set-prop 'DLL0797:01 06CB:7E92 Touchpad' 'libinput Natural Scrolling Enabled' 1 &
+

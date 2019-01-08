@@ -1,1 +1,4 @@
-/home/hizkifw/bin/lock
+#!/bin/sh
+
+# Lock and suspend
+betterlockscreen -s

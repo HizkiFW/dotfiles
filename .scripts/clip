@@ -1,1 +1,1 @@
-/home/hizkifw/bin/clip
+xclip -selection c

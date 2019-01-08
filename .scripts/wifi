@@ -1,1 +1,36 @@
-/home/hizkifw/bin/wifi
+#!/bin/bash
+
+netlist() {
+        sudo ifconfig wlp3s0 up
+        sleep 1
+        nmcli dev wifi rescan 2>/dev/null
+        sleep 1
+        nmcli dev wifi
+}
+
+case "$1" in
+    "disconnect")
+        nmcli dev disconnect wlp3s0
+        sudo ifconfig wlp3s0 down
+        ;;
+    "connect")
+        echo Scanning for networks...
+        netlist
+
+        echo SSID?
+        read -e SSID
+        echo Password?
+        read -e -s KEY
+
+        echo Connecting...
+
+        sudo ifconfig wlp3s0 up
+        nmcli dev wifi connect "$SSID" password "$KEY"
+        ;;
+    "list")
+        echo Scanning for networks...
+        netlist
+        ;;
+    *)
+        echo "Usage: wifi connect|disconnect"
+esac

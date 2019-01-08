@@ -1,1 +1,35 @@
-/home/hizkifw/bin/brightsmooth
+#!/bin/bash
+# BRIGHTSMOOTH
+# Smooths brightlight increment/decrement
+# Hizkia Felix 2018
+
+STEP=50
+
+case "$1" in
+    "up")
+        echo "Increasing brightness"
+        for i in {1..50}
+        do
+            brightlight -i 1 > /dev/null
+            sleep 0.002
+        done
+        ;;
+    "down")
+        echo "Decreasing brightness"
+        if (( $(brightlight -r | cut -d ' ' -f 5) <= 50 )); then
+            brightlight -w 1
+        else
+            for i in {1..50}
+            do
+                brightlight -d 1 > /dev/null
+                sleep 0.002
+            done
+        fi
+        ;;
+    *)
+        echo "Usage: brightsmooth up|down"
+        exit 1
+        ;;
+esac
+
+#notify-send " " -i notification-display-brightness-full -h int:value:$(brightlight -p -r | cut -d ' ' -f 5) -h string:x-canonical-private-synchronous:brightness
